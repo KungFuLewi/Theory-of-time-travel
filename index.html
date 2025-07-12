@@ -1,24 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theories of Time Travel</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Theories of Time Travel – Homepage</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <div class="slides slide1">
-          <img src="images/clocksinspace.jpg">
-          <h2>Every decision leads to a set outcome, but understanding the logic behind it is what gives you control.</h2>
-        </div>
-        <div class="slides slide2">
-          <img src="images/timespiral.jpg">
-          <h2>Reality reshapes, and nothing stays locked in place—what once was certain can shift in an instant.</h2>
-        </div>
-        <div class="slides slide3">
-          <img src="images/multiveres.jpg">
-          <h2>Infinite versions unfold, and no single path holds the truth—what is real depends on where you stand.</h2>
-        </div>
+  <header>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">Fixed Timeline</a></li>
+        <li><a href="dynamicTL.html">Dynamic Timeline</a></li>
+        <li><a href="MultiverseTL.html">Multiverse Timeline</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="slides slide1" tabindex="0" aria-label="Fixed Timeline Theory Preview">
+      <h2>Every decision leads to a set outcome, but understanding the logic behind it is what gives you control.</h2>
+      <a href="about.html">Learn about Fixed Timeline Theory</a>
+    </section>
+
+    <div class="divider">
+      <p>→ Explore the different models of time travel</p>
     </div>
+
+    <section class="slides slide2" tabindex="0" aria-label="Dynamic Timeline Theory Preview">
+      <h2>Reality reshapes, and nothing stays locked in place—what once was certain can shift in an instant.</h2>
+      <a href="dynamicTL.html">Learn about Dynamic Timeline Theory</a>
+    </section>
+
+    <div class="divider">
+      <p>→ What if every decision rewrites reality?</p>
+    </div>
+
+    <section class="slides slide3" tabindex="0" aria-label="Multiverse Timeline Theory Preview">
+      <h2>Infinite versions unfold, and no single path holds the truth—what is real depends on where you stand.</h2>
+      <a href="MultiverseTL.html">Learn about Multiverse Timeline Theory</a>
+    </section>
+
+    
+    <section class="info-section">
+      <h2>Core Timeline Theories</h2>
+      <ul>
+        <li>Fixed Timeline – Unchangeable events and deterministic logic</li>
+        <li>Dynamic Timeline – History can be altered by future actions</li>
+        <li>Multiverse Timeline – Multiple realities diverge from each moment</li>
+      </ul>
+    </section>
+
+    
+    <section class="info-section">
+      <h2>Timeline Theory Comparison</h2>
+      <table>
+        <caption>Key Differences Between Timeline Models</caption>
+        <thead>
+          <tr>
+            <th scope="col">Theory</th>
+            <th scope="col">Changeable?</th>
+            <th scope="col">Paradox Risk</th>
+            <th scope="col">Number of Outcomes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fixed</td>
+            <td>No</td>
+            <td>None</td>
+            <td>One</td>
+          </tr>
+          <tr>
+            <td>Dynamic</td>
+            <td>Yes</td>
+            <td>High</td>
+            <td>One (shifting)</td>
+          </tr>
+          <tr>
+            <td>Multiverse</td>
+            <td>Yes</td>
+            <td>Low</td>
+            <td>Infinite</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    
+    <section class="info-section">
+      <h2>Share Your Theory</h2>
+      <form id="feedbackForm" aria-label="Time Travel Feedback Form">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="theory">Favorite Theory:</label><br />
+        <select id="theory" name="theory" required>
+          <option value="">--Please choose--</option>
+          <option value="fixed">Fixed Timeline</option>
+          <option value="dynamic">Dynamic Timeline</option>
+          <option value="multiverse">Multiverse Timeline</option>
+        </select><br /><br />
+
+        <label for="message">Why do you prefer this theory?</label><br />
+        <textarea id="message" name="message" rows="5" required></textarea><br /><br />
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <p id="formResponse" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Theories of Time Travel. Keyboard navigation supported. No time limits imposed.</p>
+  </footer>
+
+  
+  <script>
+    document.getElementById("feedbackForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const theory = document.getElementById("theory").value;
+      const response = document.getElementById("formResponse");
+      response.textContent = `Thanks, ${name}! Your preference for the ${theory} timeline has been noted.`;
+      this.reset();
+    });
+  </script>
 </body>
 </html>
