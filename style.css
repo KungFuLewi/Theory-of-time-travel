@@ -39,17 +39,17 @@ h1, h2 {
 }
 
 .slide1 {
-  background-image: url("./images/two-menspace.jpg");
+  background-image: url("Images/two-menspace.jpg");
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .slide2 {
-  background-image: url("./images/galaxy-medium.jpg");
+  background-image: url("Images/galaxy-medium.jpg");
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .slide3 {
-  background-image: url("./images/bh-medium.jpg");
+  background-image: url("Images/bh-medium.jpg");
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -134,14 +134,14 @@ nav a:focus, nav a:hover {
 }
 
 .fixed-bg {
-  background-image: url("./images/two-menspace.jpg");
+  background-image: url("Images/two-menspace.jpg");
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
 }
 
 .dynamic-bg {
-  background-image: url("./images/galaxy-medium.jpg");
+  background-image: url("Images/galaxy-medium.jpg");
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
@@ -149,7 +149,7 @@ nav a:focus, nav a:hover {
 }
 
 .multiverse-bg {
-  background-image: url("./images/bh-medium.jpg");
+  background-image: url("Images/bh-medium.jpg");
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
